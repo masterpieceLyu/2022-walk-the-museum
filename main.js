@@ -23,26 +23,24 @@ let section1offsetTop = document.querySelector(".section1").offsetTop;
 let section2offsetTop = document.querySelector(".section2").offsetTop;
 const Museum = document.querySelector(".museum");
 const MuseumImg = document.querySelector(".museumImg");
-const MuseumGateImg = document.querySelector(".museumgateImg");
+const Museumgate_devide = document.querySelector(".museumgate_devide");
+const MuseumGateOpen = document.querySelectorAll(".museumgate_devide-open");
 
 addEventListener("scroll", function () {
   let value = this.scrollY;
 
-  section1span1.style.left = 50 - value * 0.1 + "%";
-  section1span2.style.left = 50 + value * 0.1 + "%";
-  // section1span1.style.transform =
-  //   "translateX(${- 50 + -value}%) translateY(-50%)";
-  // section1span2.style.transform =
-  //   "translateX(${- 50 + value}%) translateY(-50%)";
+  section1span1.style.left = 50 - value * 0.3 + "%";
+  section1span2.style.left = 50 + value * 0.3 + "%";
 
-  MuseumImg.style.width = 60 + value * 0.05 + "%";
-  MuseumImg.style.opacity = 100 - value * 0.3 + "%";
-  MuseumGateImg.style.height = 20 + value * 0.07 + "%";
-  // MuseumGateImg.style.opacity = 0 + value * 0.001;
+  MuseumImg.style.width = 90 + value * 0.05 + "%";
+  MuseumImg.style.opacity = 100 - value * 0.07 + "%";
+  Museumgate_devide.style.height = 22 + value * 0.07 + "%";
 
-  // if (value >= section2offsetTop / 2) {
-  //   MuseumImg.style.width = 60 + value * 0.05 + "%";
-  // } else {
-  //   MuseumImg.style.width = 60 + "%";
-  // }
+  if (value >= section2offsetTop / 2) {
+    console.log("value over");
+    // MuseumGateOpen[0].style.transform =
+    //   "transform(perspective(1200px) rotateY(40deg);)";
+    // MuseumGateOpen[1].style.transform =
+    //   "transform(perspective(1200px) rotateY(40deg);)";
+  }
 });
