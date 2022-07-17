@@ -26,21 +26,24 @@ const MuseumImg = document.querySelector(".museumImg");
 const Museumgate_devide = document.querySelector(".museumgate_devide");
 const MuseumGateOpen = document.querySelectorAll(".museumgate_devide-open");
 
+window.offsethei;
+
 addEventListener("scroll", function () {
   let value = this.scrollY;
 
-  section1span1.style.left = 50 - value * 0.3 + "%";
+  if (value) section1span1.style.left = 50 - value * 0.3 + "%";
   section1span2.style.left = 50 + value * 0.3 + "%";
 
   MuseumImg.style.width = 90 + value * 0.05 + "%";
-  MuseumImg.style.opacity = 100 - value * 0.07 + "%";
+  // MuseumImg.style.opacity = 100 - value * 0.07 + "%";
   Museumgate_devide.style.height = 22 + value * 0.07 + "%";
 
   if (value >= section2offsetTop / 2) {
     console.log("value over");
-    // MuseumGateOpen[0].style.transform =
-    //   "transform(perspective(1200px) rotateY(40deg);)";
-    // MuseumGateOpen[1].style.transform =
-    //   "transform(perspective(1200px) rotateY(40deg);)";
+    MuseumGateOpen[0].style.transform =
+      "transform(perspective(1200px) rotateY(40deg);)";
+    MuseumGateOpen[1].style.transform =
+      "transform(perspective(1200px) rotateY(40deg);)";
   }
+  return;
 });
