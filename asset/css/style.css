@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* background: #edede4; */
+  background-image: url(../files/main/background.png);
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+.header > .inner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 99999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 100px;
+  font-size: 22px;
+  color: #423527;
+  font-family: "DMserif";
+  font-weight: bold;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  width: 30px;
+  z-index: 99;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+#menu > div:first-child {
+  width: 30px;
+  height: 2px;
+  background: black;
+}
+
+#menu > div:nth-child(2) {
+  width: 30px;
+  height: 2px;
+  margin-top: 5px;
+  background: black;
+}
+
+#menu > div:last-child {
+  width: 30px;
+  height: 2px;
+  margin-top: 5px;
+  background: black;
+}
+
+.visual-wrap > .inner {
+  position: relative;
+  height: 200vh;
+}
+
+.visual-head {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  color: black;
+  font-size: 100px;
+  text-align: center;
+  font-family: "DMserif";
+}
+
+.head-contents {
+  height: 280px;
+}
+
+.museum {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0) scale(0.5);
+  width: 100%;
+  height: 520px;
+  background-image: url(../files/main/museum-texture.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  opacity: 0;
+  animation: intro 1s 3.4s cubic-bezier(0.83, 0, 0.17, 1) forwards;
+}
+
+@keyframes intro {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 0) scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+.mastarpiece-piece {
+  width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  margin: 200px 0;
+  white-space: nowrap;
+}
+
+.mastarpiece-piece::-webkit-scrollbar {
+  display: none;
+}
+
+.mastarpiece-piece > img {
+  width: auto;
+  height: 300px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  object-fit: cover;
+  margin: 0 50px;
+}
