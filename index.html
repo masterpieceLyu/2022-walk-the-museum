@@ -5,50 +5,191 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>walk-the-museum</title>
+
+    <!-- 공용 CSS -->
     <link rel="stylesheet" href="./asset/css/style.css" />
-    <link rel="stylesheet" href="./common/common.css">
+    <link rel="stylesheet" href="./asset/css/common.css" />
+    <link rel="stylesheet" href="./asset/css/reset.css" />
+    <link rel="stylesheet" href="./asset/css/header.css" />
+    <link rel="stylesheet" href="./asset/css/footer.css" />
+
+    <!-- 공용 plug-in -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div id="wrap">
       <header class="header">
-        <div class="inner">
+        <div class="inner header__inner">
           <div id="logo">MUSEUM</div>
           <div id="menu">
-            <div></div>
-            <div></div>
-            <div></div>
+            <a href="#none">Artists</a>
+            <a href="#none">Auctions</a>
+            <a href="#none">Exhibitions</a>
+            <a href="#none">Analysis</a>
+            <a href="#none">Services</a>
+            <div class="devide-bar"></div>
+            <a href="#none">Join Now</a>
           </div>
         </div>
       </header>
 
-      <main class="container"> 
-        <section class="visual-wrap f-p f-p1">
+      <main class="container">
+        <section class="intro-wrap">
           <div class="inner">
-            <div class="visual-head">
-              <div class="head-contents"></div>
-            </div>
-            <div class="museum"></div>
-        </section>
-        <section class="f-p f-p2"></section>
-        <section class="masterpiece-wrap f-p3">
-          <div class="inner">
-            <div class="mastarpiece-piece">
-              <img src="./asset/files/art/1.jpg" alt="">
-              <img src="./asset/files/art/2.jpg" alt="">
-              <img src="./asset/files/art/3.jpg" alt="">
-              <img src="./asset/files/art/4.jpg" alt="">
-              <img src="./asset/files/art/5.jpg" alt="">
-              <img src="./asset/files/art/6.jpg" alt="">
-              <img src="./asset/files/art/7.jpg" alt="">
-              <img src="./asset/files/art/8.jpg" alt="">
+            <div>
+              <div class="intro-l">
+                <span class="intro-l-date">June 20 - September 11 </span>
+                <span class="intro-l-lead"
+                  >HI, YOU CAN Walk<br />
+                  THE MUSEUM</span
+                >
+                <span class="intro-l-sublead"
+                  >Lorem ipsum dolor sit amet,<br />consectetur adipisicing
+                  elit.<br />Commodi repudiandae laboriosam, praesentium nihil
+                  placeat labore vero exercitationem beatae et voluptatem</span
+                >
+                <button class="intro-l-dutton">Start Walk</button>
+              </div>
+              <div class="intro-r">
+                <div class="intro-r-img">
+                  <img src="./asset/files/main/m-visual.jpeg" alt="" />
+                  <div class="intro-r-img__border"></div>
+                </div>
+                <div class="img-effect">
+                  <img src="./asset/files/main/m-visual-light.png" alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </section>
-        <section class="f-p f-p4"></section>
-        <section class="f-p f-p5"></section>
-        <section class="f-p f-p6"></section>
+        <section class="visual-wrap">
+          <div class="inner">
+            <div>
+              <div class="visual-l">
+                <span class="visual-lead">Join My Art Work</span>
+                <span class="visual-sublead"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora iure ex quia sit nostrum possimus sapiente. Ab
+                  voluptas, voluptatibus suscipit consectetur alias itaque a qui
+                  esse modi inventore soluta cum.</span
+                >
+
+                <div class="count">
+                  <span>ART TOTAL</span>
+                  <span id="art-count" class="count-num">000,000</span>
+                </div>
+                <button class="count-button">Join us</button>
+              </div>
+              <div class="visual-r">
+                <div class="scroll-down-i">
+                  <p>
+                    scroll <br />
+                    down
+                  </p>
+                  <img src="./asset/files/main/scroll-donw.svg" alt="" />
+                </div>
+                <div class="overflow-box">
+                  <div>
+                    <img src="./asset/files/art/1.jpg" alt="" />
+                    <span>Art Title</span>
+                  </div>
+                  <div>
+                    <img src="./asset/files/art/2.jpg" alt="" />
+                    <span>Art Title</span>
+                  </div>
+                  <div>
+                    <img src="./asset/files/art/3.jpg" alt="" />
+                    <span>Art Title</span>
+                  </div>
+                  <div>
+                    <img src="./asset/files/art/4.jpg" alt="" />
+                    <span>Art Title</span>
+                  </div>
+                  <div>
+                    <img src="./asset/files/art/5.jpg" alt="" />
+                    <span>Art Title</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="view__slide-wrap">
+          <div class="inner">
+            <div class="contents-wrap">
+              <div class="view__slide-head">
+                <span>Art Place</span>
+                <span
+                  >His Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam temporibus iure iusto impedit corporis quos ea
+                  eligendi atque, aut eaque omnis exercitationem mollitia fuga
+                  cupiditate voluptatem inventore sunt magni autem.</span
+                >
+              </div>
+              <div class="scrollbar-box">
+                <div class="swiper-pagination pagination_progress"></div>
+                <div class="swiper-pagination pagination_fraction"></div>
+              </div>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./asset/files/art/5.jpg" alt="" />
+                    <span class="art__title">Art Title</span>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./asset/files/art/6.jpg" alt="" />
+                    <span class="art__title">Art Title</span>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./asset/files/art/7.jpg" alt="" />
+                    <span class="art__title">Art Title</span>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./asset/files/art/8.jpg" alt="" />
+                    <span class="art__title">Art Title</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
     <script src="./asset/js/main.js"></script>
+    <script>
+      // 헤더
+      window.addEventListener("scroll", function () {
+        if (scrollY > 30) {
+          document.querySelector(".header__inner").classList.add("fill");
+        } else {
+          document.querySelector(".header__inner").classList.remove("fill");
+        }
+      });
+
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        speed: 800,
+        autoplay: {
+          delay: 3300,
+        },
+        pagination: {
+          el: ".pagination_fraction",
+          type: "fraction",
+        },
+      });
+
+      var pagingSwiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: {
+          el: ".pagination_progress",
+          type: "progressbar",
+        },
+      });
+      swiper.controller.control = pagingSwiper;
+    </script>
   </body>
 </html>
